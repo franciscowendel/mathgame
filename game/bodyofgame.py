@@ -14,3 +14,9 @@ class BodyOfGame:
     @property
     def dificuldade(self) -> int:
         return self.__dificuldade
+
+    @property
+    def ope(self):
+        return self.__ope
+
+
