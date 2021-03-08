@@ -19,8 +19,10 @@ class BodyOfGame:
     def ope(self):
         return self.__ope
 
-
     @property
     def valor1(self) -> int:
         return self.__valor1
 
+    @property
+    def valor2(self) -> int:
+        return self.__valor2
