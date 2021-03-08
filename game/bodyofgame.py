@@ -31,3 +31,11 @@ class BodyOfGame:
     def resultado(self) -> int:
         return self.__resultado
 
+    @property
+    def operacao(self):
+        return self._operacao
+
+    @operacao.setter
+    def operacao(self, ope):
+        self._operacao = ope
+
