@@ -39,3 +39,14 @@ class BodyOfGame:
     def operacao(self, ope):
         self._operacao = ope
 
+    def __str__(self):
+        inf = ''
+        if self.operacao == 1:
+            inf = '+'
+        elif self.operacao == 2:
+            inf = '-'
+        elif self.operacao == 3:
+            inf = '*'
+        else:
+            'Operação inválida...'
+        return f'Valor1: {self.valor1}\nValor2: {self.valor2}\nDificuldade: {self.dificuldade}\nOperação: {inf}'
