@@ -2,4 +2,6 @@ from random import randint
 
 
 class BodyOfGame:
-    pass
+
+    def __init__(self, dificuldade: int, ope) -> None:
+        pass
