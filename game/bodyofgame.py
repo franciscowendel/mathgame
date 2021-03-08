@@ -26,3 +26,8 @@ class BodyOfGame:
     @property
     def valor2(self) -> int:
         return self.__valor2
+
+    @property
+    def resultado(self) -> int:
+        return self.__resultado
+
