@@ -20,3 +20,7 @@ class BodyOfGame:
         return self.__ope
 
 
+    @property
+    def valor1(self) -> int:
+        return self.__valor1
+
