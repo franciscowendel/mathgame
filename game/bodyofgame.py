@@ -93,3 +93,6 @@ class BodyOfGame:
         else:
             return 'Erro...'
         return ope
+
+    def _checar_resultado(self, resposta) -> bool:
+        pass
