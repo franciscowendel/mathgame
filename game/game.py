@@ -19,7 +19,7 @@ def jogar(pontos):
 
     corpodojogo: BodyOfGame = BodyOfGame(dificuldade, ope)
 
-
+    corpodojogo.gerar_operacao(ope)
 
 
 if __name__ == '__main__':
