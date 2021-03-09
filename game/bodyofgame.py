@@ -73,7 +73,7 @@ class BodyOfGame:
         else:
             return randint(0, 100000)
 
-    def _gerar_resultado(self):
+    def _gerar_resultado(self) -> int:
         if self.operacao == 1:
             return self.valor1 + self.valor2
         elif self.operacao == 2:
@@ -81,7 +81,7 @@ class BodyOfGame:
         elif self.operacao == 3:
             return self.valor1 * self.valor2
         else:
-            return 'Erro...'
+            print('Erro...')
 
     def gerar_operacao(self, ope):
         if ope == 1:
