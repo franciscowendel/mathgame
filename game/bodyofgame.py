@@ -100,3 +100,6 @@ class BodyOfGame:
         if self.resultado == resposta:
             print('RESPOSTA CORRETA!')
             verify: bool = True
+        else:
+            print('RESPOSTA INCORRETA!')
+        print(f'{self.valor1} {self._simbolo_op()} {self.valor2} = {self.resultado}')
