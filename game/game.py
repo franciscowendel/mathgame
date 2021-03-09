@@ -25,7 +25,7 @@ def jogar(pontos):
     corpodojogo.mostrar_operacao()
 
     try:
-        pass
+        resultado: int = int(input())
 
     except (ValueError, TypeError, UnboundLocalError) as err:
         return f'Erro do tipo {err} encontrado'
