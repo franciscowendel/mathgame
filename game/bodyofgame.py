@@ -103,6 +103,7 @@ class BodyOfGame:
         verify: bool = False
 
         if self.resultado == resposta:
+            print()
             print('RESPOSTA CORRETA!')
             verify: bool = True
         else:
