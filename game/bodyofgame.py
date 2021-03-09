@@ -61,7 +61,7 @@ class BodyOfGame:
         else:
             return 'Erro...'
 
-    def _gerar_valor(self):
+    def _gerar_valor(self) -> int:
         if self.dificuldade == 1:
             return randint(0, 10)
         elif self.dificuldade == 2:
