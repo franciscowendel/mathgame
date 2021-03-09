@@ -46,6 +46,9 @@ def jogar(pontos):
     except (ValueError, TypeError, UnboundLocalError) as err:
         return f'Erro do tipo {err} encontrado'
 
+    if continuar == 1:
+        jogar(pontos)
+
 
 if __name__ == '__main__':
     main()
