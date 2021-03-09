@@ -50,3 +50,13 @@ class BodyOfGame:
         else:
             'Operação inválida...'
         return f'Valor1: {self.valor1}\nValor2: {self.valor2}\nDificuldade: {self.dificuldade}\nOperação: {inf}'
+
+    def _simbolo_op(self):
+        if self.operacao == 1:
+            return '+'
+        elif self.operacao == 2:
+            return '-'
+        elif self.operacao == 3:
+            '*'
+        else:
+            return 'Erro...'
