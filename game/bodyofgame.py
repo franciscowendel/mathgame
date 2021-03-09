@@ -98,7 +98,7 @@ class BodyOfGame:
             return 'Erro...'
         return ope
 
-    def _checar_resultado(self, resposta) -> bool:
+    def checar_resultado(self, resposta) -> bool:
         """Checa se o resultado criado pelo método '_gerar_resultado' é igual ao dado pelo usuário."""
         verify: bool = False
 
