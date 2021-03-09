@@ -82,3 +82,14 @@ class BodyOfGame:
             return self.valor1 * self.valor2
         else:
             return 'Erro...'
+
+    def gerar_operacao(self, ope):
+        if ope == 1:
+            self.operacao = 1
+        elif ope == 2:
+            self.operacao = 2
+        elif ope == 3:
+            self.operacao = 3
+        else:
+            return 'Erro...'
+        return ope
