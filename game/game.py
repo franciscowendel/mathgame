@@ -35,6 +35,7 @@ def jogar(pontos):
         pontos += dificuldade
         print()
         print(f'Você possui {pontos} ponto(s)')
+        print()
 
     try:
         continuar: int = int(input('DESEJA CONTINUAR: [1 - SIM, 2 - NÃO] '))
