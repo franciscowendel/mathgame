@@ -95,4 +95,5 @@ class BodyOfGame:
         return ope
 
     def _checar_resultado(self, resposta) -> bool:
-        pass
+        verify: bool = False
+
