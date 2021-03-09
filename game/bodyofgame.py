@@ -97,3 +97,6 @@ class BodyOfGame:
     def _checar_resultado(self, resposta) -> bool:
         verify: bool = False
 
+        if self.resultado == resposta:
+            print('RESPOSTA CORRETA!')
+            verify: bool = True
