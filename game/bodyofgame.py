@@ -72,3 +72,12 @@ class BodyOfGame:
             return randint(0, 10000)
         else:
             return randint(0, 100000)
+
+    def _gerar_resultado(self):
+        if self.operacao == 1:
+            return self.valor1 + self.valor2
+        elif self.operacao == 2:
+            return self.valor1 - self.valor1
+
+
+
