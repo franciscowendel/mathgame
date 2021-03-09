@@ -52,6 +52,7 @@ class BodyOfGame:
         return f'Valor1: {self.valor1}\nValor2: {self.valor2}\nDificuldade: {self.dificuldade}\nOperação: {inf}'
 
     def _simbolo_op(self):
+        """Mostrará a operação matemática tanto no método 'checar_resultado' quanto em 'mostrar_operacao'"""
         if self.operacao == 1:
             return '+'
         elif self.operacao == 2:
