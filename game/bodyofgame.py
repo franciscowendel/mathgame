@@ -111,4 +111,5 @@ class BodyOfGame:
         return verify
 
     def mostrar_operacao(self):
+        """Mostra os valores criados e a operação escolhida pelo usuário em forma de pergunta."""
         print(f'{self.valor1} {self._simbolo_op()} {self.valor2} = ? ')
