@@ -7,7 +7,10 @@ def main():
 
 
 def jogar(pontos):
-    pass
+    try:
+        pass
+    except (ValueError, TypeError, UnboundLocalError) as err:
+        return f'Erro do tipo {err} encontrado'
 
 
 if __name__ == '__main__':
