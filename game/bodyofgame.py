@@ -103,3 +103,4 @@ class BodyOfGame:
         else:
             print('RESPOSTA INCORRETA!')
         print(f'{self.valor1} {self._simbolo_op()} {self.valor2} = {self.resultado}')
+        return verify
