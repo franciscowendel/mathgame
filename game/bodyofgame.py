@@ -66,3 +66,5 @@ class BodyOfGame:
             return randint(0, 10)
         elif self.dificuldade == 2:
             return randint(0, 100)
+        elif self.dificuldade == 3:
+            return randint(0, 1000)
