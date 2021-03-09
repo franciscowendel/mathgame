@@ -24,6 +24,12 @@ def jogar(pontos):
     print('DIGITE A RESPOSTA: ')
     corpodojogo.mostrar_operacao()
 
+    try:
+        pass
+
+    except (ValueError, TypeError, UnboundLocalError) as err:
+        return f'Erro do tipo {err} encontrado'
+
 
 if __name__ == '__main__':
     main()
