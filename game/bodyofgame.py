@@ -87,6 +87,7 @@ class BodyOfGame:
             print('Erro...')
 
     def gerar_operacao(self, ope):
+        """Faz com que o usuário possa 'settar' uma operação específica."""
         if ope == 1:
             self.operacao = 1
         elif ope == 2:
@@ -98,6 +99,7 @@ class BodyOfGame:
         return ope
 
     def _checar_resultado(self, resposta) -> bool:
+        """Checa se o resultado criado pelo método '_gerar_resultado' é igual ao dado pelo usuário."""
         verify: bool = False
 
         if self.resultado == resposta:
