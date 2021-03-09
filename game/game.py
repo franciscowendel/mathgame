@@ -30,8 +30,10 @@ def jogar(pontos):
     except (ValueError, TypeError, UnboundLocalError) as err:
         return f'Erro do tipo {err} encontrado'
 
-    if corpodojogo._checar_resultado(resposta):
-        pass
+    if corpodojogo.checar_resultado(resposta):
+        pontos += dificuldade
+        print(f'Você possui {pontos} ponto(s)')
+
 
 if __name__ == '__main__':
     main()
