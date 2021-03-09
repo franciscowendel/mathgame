@@ -37,7 +37,11 @@ def jogar(pontos):
         print(f'Você possui {pontos} ponto(s)')
 
     try:
-        pass
+        continuar: int = int(input('DESEJA CONTINUAR: [1 - SIM, 2 - NÃO] '))
+        if continuar > 2:
+            print('Erro...')
+            main()
+
     except (ValueError, TypeError, UnboundLocalError) as err:
         return f'Erro do tipo {err} encontrado'
 
