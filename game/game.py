@@ -36,6 +36,11 @@ def jogar(pontos):
         print()
         print(f'Você possui {pontos} ponto(s)')
 
+    try:
+        pass
+    except (ValueError, TypeError, UnboundLocalError) as err:
+        return f'Erro do tipo {err} encontrado'
+
 
 if __name__ == '__main__':
     main()
