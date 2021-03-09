@@ -17,6 +17,10 @@ def jogar(pontos):
     except (ValueError, TypeError, UnboundLocalError) as err:
         return f'Erro do tipo {err} encontrado'
 
+    corpodojogo: BodyOfGame = BodyOfGame(dificuldade, ope)
+
+
+
 
 if __name__ == '__main__':
     main()
