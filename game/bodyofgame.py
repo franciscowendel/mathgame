@@ -76,6 +76,7 @@ class BodyOfGame:
             return randint(0, 100000)
 
     def _gerar_resultado(self) -> int:
+        """Gera o resultado final de acordo com os valores criados e a operação escolhida."""
         if self.operacao == 1:
             return self.valor1 + self.valor2
         elif self.operacao == 2:
