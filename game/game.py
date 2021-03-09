@@ -8,3 +8,7 @@ def main():
 
 def jogar(pontos):
     pass
+
+
+if __name__ == '__main__':
+    main()
