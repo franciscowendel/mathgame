@@ -21,6 +21,7 @@ def jogar(pontos):
 
     corpodojogo.gerar_operacao(ope)
 
+    print()
     print('DIGITE A RESPOSTA: ')
     corpodojogo.mostrar_operacao()
 
@@ -32,6 +33,7 @@ def jogar(pontos):
 
     if corpodojogo.checar_resultado(resposta):
         pontos += dificuldade
+        print()
         print(f'Você possui {pontos} ponto(s)')
 
 
