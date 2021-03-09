@@ -34,7 +34,7 @@ def jogar(pontos):
     if corpodojogo.checar_resultado(resposta):
         pontos += dificuldade
         print()
-        print(f'Você possui {pontos} ponto(s)')
+        print(f'Você possui {pontos} ponto(s)! ')
         print()
 
     try:
@@ -48,6 +48,9 @@ def jogar(pontos):
 
     if continuar == 1:
         jogar(pontos)
+    else:
+        print(f'Você terminou o jogo com {pontos} ponto(s)! ')
+        exit(1)
 
 
 if __name__ == '__main__':
