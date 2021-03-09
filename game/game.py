@@ -21,6 +21,9 @@ def jogar(pontos):
 
     corpodojogo.gerar_operacao(ope)
 
+    print('DIGITE A RESPOSTA: ')
+    corpodojogo.mostrar_operacao()
+
 
 if __name__ == '__main__':
     main()
