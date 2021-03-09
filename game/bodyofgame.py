@@ -70,5 +70,5 @@ class BodyOfGame:
             return randint(0, 1000)
         elif self.dificuldade == 4:
             return randint(0, 10000)
-
-
+        else:
+            return randint(0, 100000)
