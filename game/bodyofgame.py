@@ -52,7 +52,7 @@ class BodyOfGame:
         return f'Valor1: {self.valor1}\nValor2: {self.valor2}\nDificuldade: {self.dificuldade}\nOperação: {inf}'
 
     def _simbolo_op(self):
-        """Mostrará a operação matemática tanto no método 'checar_resultado' quanto em 'mostrar_operacao'"""
+        """Mostra a operação matemática tanto no método 'checar_resultado' quanto em 'mostrar_operacao' """
         if self.operacao == 1:
             return '+'
         elif self.operacao == 2:
@@ -63,6 +63,7 @@ class BodyOfGame:
             return 'Erro...'
 
     def _gerar_valor(self) -> int:
+        """Gera os valores do jogo de acordo com a dificuldade escolhida pelo o usuário."""
         if self.dificuldade == 1:
             return randint(0, 10)
         elif self.dificuldade == 2:
