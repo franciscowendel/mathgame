@@ -9,7 +9,7 @@ class BodyOfGame:
         self.__valor1: int = self._gerar_valor()
         self.__valor2: int = self._gerar_valor()
         self.__resultado: int = self._gerar_resultado()
-        self._operacao = self.gerar_operacao(ope)
+        self._operacao = self.ope
 
     @property
     def dificuldade(self) -> int:
