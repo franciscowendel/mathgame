@@ -39,7 +39,12 @@ def jogar(pontos):
     corpodojogo.mostrar_operacao()
 
     try:
-        resposta: int = int(input())
+        resposta = input()
+        if not resposta.isnumeric():
+            print('Digite apenas números.')
+            main()
+        else:
+            resposta = int(resposta)
 
     except (ValueError, TypeError, UnboundLocalError) as err:
         return f'Erro do tipo {err} encontrado'
