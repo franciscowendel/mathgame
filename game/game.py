@@ -18,10 +18,15 @@ def jogar(pontos):
                 print('Apenas números entre 1 e 4.')
                 main()
 
-        ope: int = int(input('OPERAÇÃO: [1 - SOMA, 2 - SUBTRAÇÃO, 3 - MULTIPLICAÇÃO]'))
-        if ope > 3:
-            print('Operação inválida...')
+        ope = input('OPERAÇÃO: [1 - SOMA, 2 - SUBTRAÇÃO, 3 - MULTIPLICAÇÃO]')
+        if not ope.isnumeric():
+            print('Digite apenas números.')
             main()
+        else:
+            ope = int(ope)
+            if ope > 3:
+                print('Apenas números entre 1 e 3.')
+                main()
 
     except (ValueError, TypeError, UnboundLocalError) as err:
         return f'Erro do tipo {err} encontrado'
