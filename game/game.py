@@ -62,12 +62,12 @@ def jogar(pontos):
         continuar = input('DESEJA CONTINUAR: [1 - SIM, 2 - NÃO] ')
         if not continuar.isnumeric():
             print('Digite apenas números.')
-            main()
+            jogar(pontos)
         else:
             continuar = int(continuar)
             if continuar > 2:
                 print('Apenas números entre 1 e 2.')
-                main()
+                jogar(pontos)
 
     except (ValueError, TypeError, UnboundLocalError) as err:
         return f'Erro do tipo {err} encontrado'
