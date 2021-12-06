@@ -8,7 +8,16 @@ def main():
 
 def jogar(pontos):
     try:
-        dificuldade: int = int(input('DIFICULDADE: [1 - FÁCIL, 2 - MÉDIA, 3 - DIFÍCIL, 4 - MUITO DIFÍCIL] '))
+        dificuldade = input('DIFICULDADE: [1 - FÁCIL, 2 - MÉDIA, 3 - DIFÍCIL, 4 - MUITO DIFÍCIL] ')
+        if not dificuldade.isnumeric():
+            print('Digite apenas números.')
+            main()
+        else:
+            dificuldade = int(dificuldade)
+            if dificuldade > 4:
+                print('Apenas números entre 1 e 4.')
+                main()
+
         ope: int = int(input('OPERAÇÃO: [1 - SOMA, 2 - SUBTRAÇÃO, 3 - MULTIPLICAÇÃO]'))
         if ope > 3:
             print('Operação inválida...')
