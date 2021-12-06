@@ -52,7 +52,10 @@ def jogar(pontos):
     if corpodojogo.checar_resultado(resposta):
         pontos += dificuldade
         print()
-        print(f'Você possui {pontos} ponto(s)! ')
+        if pontos == 1:
+            print(f'Você possui {pontos} ponto.')
+        else:
+            print(f'Você possui {pontos} pontos.')
         print()
 
     try:
