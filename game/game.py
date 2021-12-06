@@ -76,7 +76,10 @@ def jogar(pontos):
         jogar(pontos)
     else:
         print()
-        print(f'Você terminou o jogo com {pontos} ponto(s)! ')
+        if pontos == 1:
+            print(f'Você terminou o jogo com {pontos} ponto.')
+        else:
+            print(f'Você terminou o jogo com {pontos} pontos.')
         exit(1)
 
 
