@@ -100,6 +100,8 @@ class BodyOfGame:
             self.operacao = 2
         elif ope == 3:
             self.operacao = 3
+        elif ope == 4:
+            self.operacao = 4
         else:
             return 'Erro...'
         return ope
