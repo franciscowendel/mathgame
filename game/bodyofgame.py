@@ -60,7 +60,9 @@ class BodyOfGame:
         elif self.operacao == 2:
             return '-'
         elif self.operacao == 3:
-            '*'
+            return '*'
+        elif self.operacao == 4:
+            return '//'
         else:
             return 'Erro...'
 
