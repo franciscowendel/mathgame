@@ -42,7 +42,7 @@ def jogar(pontos):
         resposta = input()
         if not resposta.isnumeric():
             print('Digite apenas números.')
-            main()
+            jogar(pontos)
         else:
             resposta = int(resposta)
 
