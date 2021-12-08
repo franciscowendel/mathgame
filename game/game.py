@@ -18,13 +18,13 @@ def jogar(pontos):
                 print('Apenas números entre 1 e 4.')
                 main()
 
-        ope = input('OPERAÇÃO: [1 - SOMA, 2 - SUBTRAÇÃO, 3 - MULTIPLICAÇÃO]')
+        ope = input('OPERAÇÃO: [1 - SOMA, 2 - SUBTRAÇÃO, 3 - MULTIPLICAÇÃO, 4 - DIVISÃO] ')
         if not ope.isnumeric():
             print('Digite apenas números.')
             main()
         else:
             ope = int(ope)
-            if ope > 3:
+            if ope > 4:
                 print('Apenas números entre 1 e 3.')
                 main()
 
