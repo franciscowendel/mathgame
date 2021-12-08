@@ -87,6 +87,8 @@ class BodyOfGame:
             return self.valor1 - self.valor2
         elif self.operacao == 3:
             return self.valor1 * self.valor2
+        elif self.operacao == 4:
+            return self.valor1 // self.valor2
         else:
             print('Erro...')
 
