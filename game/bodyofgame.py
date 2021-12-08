@@ -48,7 +48,7 @@ class BodyOfGame:
         elif self.operacao == 3:
             inf = '*'
         else:
-            'Operação inválida...'
+            print('Operação inválida...')
         return f'Valor1: {self.valor1}\nValor2: {self.valor2}\nDificuldade: {self.dificuldade}\nOperação: {inf}'
 
     def _simbolo_op(self):
