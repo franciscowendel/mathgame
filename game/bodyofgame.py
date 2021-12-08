@@ -47,6 +47,8 @@ class BodyOfGame:
             inf = '-'
         elif self.operacao == 3:
             inf = '*'
+        elif self.operacao == 4:
+            inf = '//'
         else:
             print('Operação inválida...')
         return f'Valor1: {self.valor1}\nValor2: {self.valor2}\nDificuldade: {self.dificuldade}\nOperação: {inf}'
