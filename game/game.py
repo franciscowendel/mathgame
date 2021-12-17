@@ -10,13 +10,17 @@ def jogar(pontos):
     try:
         dificuldade = input('DIFICULDADE: [1 - FÁCIL, 2 - MÉDIA, 3 - DIFÍCIL, 4 - MUITO DIFÍCIL] ')
         if not dificuldade.isnumeric():
+            print()
             print('Digite apenas números.')
-            main()
+            print()
+            jogar(pontos)
         else:
             dificuldade = int(dificuldade)
             if dificuldade > 4:
+                print()
                 print('Apenas números entre 1 e 4.')
-                main()
+                print()
+                jogar(pontos)
 
         ope = input('OPERAÇÃO: [1 - SOMA, 2 - SUBTRAÇÃO, 3 - MULTIPLICAÇÃO, 4 - DIVISÃO] ')
         if not ope.isnumeric():
@@ -25,8 +29,10 @@ def jogar(pontos):
         else:
             ope = int(ope)
             if ope > 4:
+                print()
                 print('Apenas números entre 1 e 3.')
-                main()
+                print()
+                jogar(pontos)
 
     except (ValueError, TypeError, UnboundLocalError) as err:
         return f'Erro do tipo {err} encontrado'
@@ -53,20 +59,28 @@ def jogar(pontos):
         pontos += dificuldade
         print()
         if pontos == 1:
+            print()
             print(f'Você possui {pontos} ponto.')
+            print()
         else:
+            print()
             print(f'Você possui {pontos} pontos.')
+            print()
         print()
 
     try:
         continuar = input('DESEJA CONTINUAR: [1 - SIM, 2 - NÃO] ')
         if not continuar.isnumeric():
+            print()
             print('Digite apenas números.')
+            print()
             jogar(pontos)
         else:
             continuar = int(continuar)
             if continuar > 2:
+                print()
                 print('Apenas números entre 1 e 2.')
+                print()
                 jogar(pontos)
 
     except (ValueError, TypeError, UnboundLocalError) as err:
@@ -75,11 +89,14 @@ def jogar(pontos):
     if continuar == 1:
         jogar(pontos)
     else:
-        print()
         if pontos == 1:
+            print()
             print(f'Você terminou o jogo com {pontos} ponto.')
+            print()
         else:
+            print()
             print(f'Você terminou o jogo com {pontos} pontos.')
+            print()
         exit(1)
 
 
