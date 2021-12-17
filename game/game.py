@@ -35,7 +35,7 @@ def jogar(pontos):
                 jogar(pontos)
 
     except (ValueError, TypeError, UnboundLocalError) as err:
-        return f'Erro do tipo {err} encontrado'
+        return f'Erros do tipo {err} encontrados.'
 
     corpodojogo: BodyOfGame = BodyOfGame(dificuldade, ope)
 
@@ -53,7 +53,7 @@ def jogar(pontos):
             resposta = int(resposta)
 
     except (ValueError, TypeError, UnboundLocalError) as err:
-        return f'Erro do tipo {err} encontrado'
+        return f'Erros do tipo {err} encontrados.'
 
     if corpodojogo.checar_resultado(resposta):
         pontos += dificuldade
@@ -84,7 +84,7 @@ def jogar(pontos):
                 jogar(pontos)
 
     except (ValueError, TypeError, UnboundLocalError) as err:
-        return f'Erro do tipo {err} encontrado'
+        return f'Erros do tipo {err} encontrados.'
 
     if continuar == 1:
         jogar(pontos)
