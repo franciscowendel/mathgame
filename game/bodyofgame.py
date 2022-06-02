@@ -70,7 +70,10 @@ class BodyOfGame:
         if self.operacao == 1:
             return self.valor1 + self.valor2
         elif self.operacao == 2:
-            return self.valor1 - self.valor2
+            if self.valor1 < self.valor2:
+                return self.valor2 - self.valor1
+            else:
+                return self.valor1 - self.valor2
         elif self.operacao == 3:
             return self.valor1 * self.valor2
         elif self.operacao == 4:
@@ -107,4 +110,7 @@ class BodyOfGame:
 
     def mostrar_operacao(self):
         """Mostra os valores criados e a operação escolhida pelo usuário em forma de pergunta."""
-        print(f'{self.valor1} {self._simbolo_op()} {self.valor2} = ? ')
+        if self.valor1 < self.valor2:
+            print(f'{self.valor2} {self._simbolo_op()} {self.valor1} = ?')
+        else:
+            print(f'{self.valor1} {self._simbolo_op()} {self.valor2} = ?')
