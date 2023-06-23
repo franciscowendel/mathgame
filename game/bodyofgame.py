@@ -100,9 +100,9 @@ class BodyOfGame:
         else:
             print('RESPOSTA INCORRETA!')
         if self.valor_1 < self.valor_2:
-            print(f'{self.valor_2} {self._simbolo_op()} {self.valor_1} = {self.resultado}')
+            print(f'{self.valor2} {self._simbolo_op()} {self.valor1} = {self.resultado}')
         else:
-            print(f'{self.valor_1} {self._simbolo_op()} {self.valor_2} = {self.resultado}')
+            print(f'{self.valor1} {self._simbolo_op()} {self.valor2} = {self.resultado}')
         return verify
 
     def mostrar_pergunta(self):
