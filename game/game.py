@@ -9,7 +9,7 @@ nomes = []
 
 
 def jogar(pontos):
-    global nome
+    global nome  # noqa
     try:
         if len(nomes) == 0:
             nome = input('SEU NOME: ')
