@@ -1,4 +1,4 @@
-from bodyofgame import BodyOfGame
+ntafrom bodyofgame import BodyOfGame
 
 
 def main():
@@ -52,7 +52,7 @@ def jogar(pontos):
     corpodojogo.gerar_operacao(ope)
 
     print('PERGUNTA: ')
-    corpodojogo.mostrar_operacao()
+    corpodojogo.mostrar_pergunta()
 
     try:
         resposta = input()
