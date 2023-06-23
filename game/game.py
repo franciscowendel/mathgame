@@ -1,4 +1,4 @@
-ntafrom bodyofgame import BodyOfGame
+`ntafrom bodyofgame import BodyOfGame
 
 
 def main():
@@ -18,7 +18,7 @@ def jogar(pontos):
                 jogar(pontos)
             
             
-        dificuldade = input('DIFICULDADE: [1 - FÁCIL, 2 - MÉDIA, 3 - DIFÍCIL, 4 - MUITO DIFÍCIL] ')
+        dificuldade = input(f'{nome}, ESCOLHA A DIFICULDADE: [1 - FÁCIL, 2 - MÉDIA, 3 - DIFÍCIL, 4 - MUITO DIFÍCIL] ')
         if dificuldade == '' or not dificuldade.isnumeric():
             print()
             print('Digite apenas números.')
@@ -32,7 +32,7 @@ def jogar(pontos):
                 print()
                 jogar(pontos)
 
-        ope = input('OPERAÇÃO: [1 - SOMA, 2 - SUBTRAÇÃO, 3 - MULTIPLICAÇÃO] ')
+        ope = input(f'{nome}, ESCOLHA A OPERAÇÃO: [1 - SOMA, 2 - SUBTRAÇÃO, 3 - MULTIPLICAÇÃO] ')
         if ope == '' or not ope.isnumeric():
             print('Digite apenas números.')
             main()
