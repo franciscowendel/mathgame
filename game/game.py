@@ -19,7 +19,7 @@ def jogar(pontos):
             
             
         dificuldade = input('DIFICULDADE: [1 - FÁCIL, 2 - MÉDIA, 3 - DIFÍCIL, 4 - MUITO DIFÍCIL] ')
-        if not dificuldade.isnumeric():
+        if dificuldade == '' or not dificuldade.isnumeric():
             print()
             print('Digite apenas números.')
             print()
@@ -33,7 +33,7 @@ def jogar(pontos):
                 jogar(pontos)
 
         ope = input('OPERAÇÃO: [1 - SOMA, 2 - SUBTRAÇÃO, 3 - MULTIPLICAÇÃO] ')
-        if not ope.isnumeric():
+        if ope == '' or not ope.isnumeric():
             print('Digite apenas números.')
             main()
         else:
@@ -51,7 +51,7 @@ def jogar(pontos):
 
     corpodojogo.gerar_operacao(ope)
 
-    print('DIGITE A RESPOSTA: ')
+    print('PERGUNTA: ')
     corpodojogo.mostrar_operacao()
 
     try:
