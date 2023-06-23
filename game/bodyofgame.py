@@ -99,7 +99,7 @@ class BodyOfGame:
             verify: bool = True
         else:
             print('RESPOSTA INCORRETA!')
-        if self.valor_1 < self.valor_2:
+        if self.valor1 < self.valor2:
             print(f'{self.valor2} {self._simbolo_op()} {self.valor1} = {self.resultado}')
         else:
             print(f'{self.valor1} {self._simbolo_op()} {self.valor2} = {self.resultado}')
