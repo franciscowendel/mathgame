@@ -5,9 +5,19 @@ def main():
     pontos: int = 0
     jogar(pontos)
 
+nomes = []
+
 
 def jogar(pontos):
+    global nome
     try:
+        if len(nomes) == 0:
+            nome = input('SEU NOME: ')
+            if nome == '' or nome.isnumeric():
+                print('erro...')
+                jogar(pontos)
+            
+            
         dificuldade = input('DIFICULDADE: [1 - FÁCIL, 2 - MÉDIA, 3 - DIFÍCIL, 4 - MUITO DIFÍCIL] ')
         if not dificuldade.isnumeric():
             print()
