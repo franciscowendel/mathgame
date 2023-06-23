@@ -105,7 +105,7 @@ class BodyOfGame:
             print(f'{self.valor_1} {self._simbolo_op()} {self.valor_2} = {self.resultado}')
         return verify
 
-    def mostrar_operacao(self):
+    def mostrar_pergunta(self):
         """Mostra os valores criados e a operação escolhida pelo usuário em forma de pergunta."""
         if self.valor1 < self.valor2:
             print(f'{self.valor2} {self._simbolo_op()} {self.valor1} = ?')
