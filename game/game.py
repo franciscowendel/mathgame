@@ -70,16 +70,16 @@ def jogar(pontos):
         print()
         if pontos == 1:
             print()
-            print(f'Você possui {pontos} ponto.')
+            print(f'{nome}, Você possui {pontos} ponto.')
             print()
         else:
             print()
-            print(f'Você possui {pontos} pontos.')
+            print(f'{nome}, Você possui {pontos} pontos.')
             print()
         print()
 
     try:
-        continuar = input('DESEJA CONTINUAR: [1 - SIM, 2 - NÃO] ')
+        continuar = input(f'{nome}, DESEJA CONTINUAR: [1 - SIM, 2 - NÃO] ')
         if not continuar.isnumeric():
             print()
             print('Digite apenas números.')
@@ -101,11 +101,11 @@ def jogar(pontos):
     else:
         if pontos == 1:
             print()
-            print(f'Você terminou o jogo com {pontos} ponto.')
+            print(f'{nome}, Você terminou o jogo com {pontos} ponto.')
             print()
         else:
             print()
-            print(f'Você terminou o jogo com {pontos} pontos.')
+            print(f'{nome}, Você terminou o jogo com {pontos} pontos.')
             print()
         exit(1)
 
