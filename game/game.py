@@ -44,13 +44,12 @@ def jogar(pontos):
                 print('Apenas números entre 1 e 3.')
                 print()
                 jogar(pontos)
+                
+        corpodojogo: BodyOfGame = BodyOfGame(dificuldade, ope)
+        corpodojogo.gerar_operacao(ope)
 
     except (ValueError, TypeError, UnboundLocalError) as err:
         return f'Erros do tipo {err} encontrados.'
-
-    corpodojogo: BodyOfGame = BodyOfGame(dificuldade, ope)
-
-    corpodojogo.gerar_operacao(ope)
 
     print('PERGUNTA: ')
     corpodojogo.mostrar_pergunta()
