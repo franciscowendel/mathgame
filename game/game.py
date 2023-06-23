@@ -1,4 +1,4 @@
-`ntafrom bodyofgame import BodyOfGame
+from bodyofgame import BodyOfGame
 
 
 def main():
