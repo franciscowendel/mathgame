@@ -13,6 +13,7 @@ def jogar(pontos):
     try:
         if len(nomes) == 0:
             nome = input('SEU NOME: ')
+            nomes.append(nome)
             if nome == '' or nome.isnumeric():
                 print('erro...')
                 jogar(pontos)
