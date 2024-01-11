@@ -3,13 +3,13 @@ from random import randint
 
 class BodyOfGame:
 
-    def __init__(self, dificuldade: int, ope) -> None:
-        self.__dificuldade: int = dificuldade
-        self.__ope = self.gerar_operacao(ope)
-        self.__valor1: int = self._gerar_valor()
-        self.__valor2: int = self._gerar_valor()
-        self.__resultado: int = self._gerar_resultado()
-        self._operacao = self.ope
+    def __init__(self, difficulty: int, ope) -> None:
+        self.__difficulty: int = difficulty
+        self.__ope = self._create_operation(ope)
+        self.__value_1: int = self._create_value()
+        self.__value_2: int = self._create_value()
+        self.__result: int = self._create_result()
+        self._operation = self.ope
 
     @property
     def dificuldade(self) -> int:
