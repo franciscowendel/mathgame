@@ -89,20 +89,23 @@ class BodyOfGame:
             raise ValueError('error...')
         return ope
 
-    def checar_resultado(self, resposta) -> bool:
-        """Checa se o resultado criado pelo método '_gerar_resultado' é igual ao dado pelo usuário."""
+    def _check_result(self, answer) -> bool:
+        """Checks if the result is the same as the answer given by the user."""
         verify: bool = False
 
-        if self.resultado == resposta:
+        if self.result == answer:
             print()
-            print('RESPOSTA CORRETA!')
+            print('Congratulations, you got the answer right! :)')
+            print()
             verify: bool = True
         else:
-            print('RESPOSTA INCORRETA!')
-        if self.valor1 < self.valor2:
-            print(f'{self.valor2} {self._simbolo_op()} {self.valor1} = {self.resultado}')
+            print()
+            print('Unfortunately, you got the answer wrong! :(')
+            print()
+        if self.value_1 < self.value_2:
+            print(f'{self.value_2} {self._symbol_operation()} {self.value_1} = {self.result}')
         else:
-            print(f'{self.valor1} {self._simbolo_op()} {self.valor2} = {self.resultado}')
+            print(f'{self.value_2} {self._symbol_operation()} {self.value_2} = {self.result}')
         return verify
 
     def mostrar_pergunta(self):
