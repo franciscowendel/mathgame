@@ -105,7 +105,7 @@ class BodyOfGame:
         if self.value_1 < self.value_2:
             print(f'{self.value_2} {self._symbol_operation()} {self.value_1} = {self.result}')
         else:
-            print(f'{self.value_2} {self._symbol_operation()} {self.value_2} = {self.result}')
+            print(f'{self.value_1} {self._symbol_operation()} {self.value_2} = {self.result}')
         return verify
 
     def _show_question(self):
