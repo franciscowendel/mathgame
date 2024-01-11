@@ -80,36 +80,38 @@ def play(points):
     except (ValueError, TypeError) as err:
         return f'Errors {err} found.'
 
-    if corpodojogo.checar_resultado(resposta):
-        pontos += dificuldade
+    if game._check_result(answer):
+        points += difficulty
         print()
-        if pontos == 1:
+        if points == 1:
             print()
-            print(f'{nome}, Você possui {pontos} ponto.')
+            print(f'{name}, so far you have {points} point.')
             print()
         else:
             print()
-            print(f'{nome}, Você possui {pontos} pontos.')
+            print(f'{name}, so far you have {points} points.')
             print()
         print()
 
     try:
-        continuar = input(f'{nome}, DESEJA CONTINUAR: [1 - SIM, 2 - NÃO] ')
-        if not continuar.isnumeric():
+        keep_in_the_game = input(f'{name}, Want to keep in the game: [1 - Yes, 2 - No] ')
+        if not keep_in_the_game.isnumeric():
             print()
-            print('Digite apenas números.')
+            print('Type numbers.')
             print()
-            jogar(pontos)
+            sleep(0.5)
+            play(points)
         else:
-            continuar = int(continuar)
-            if continuar > 2:
+            keep_in_the_game = int(keep_in_the_game)
+            if keep_in_the_game > 2:
                 print()
-                print('Apenas números entre 1 e 2.')
+                print('Only numbers between 1 and 2.')
                 print()
-                jogar(pontos)
+                sleep(0.5)
+                play(points)
 
-    except (ValueError, TypeError, UnboundLocalError) as err:
-        return f'Erros do tipo {err} encontrados.'
+    except (ValueError, TypeError) as err:
+        return f'Errors {err} found.'
 
     if continuar == 1:
         jogar(pontos)
