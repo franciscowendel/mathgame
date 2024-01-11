@@ -35,20 +35,20 @@ class BodyOfGame:
     def operation(self):
         return self._operation
 
-    @operacao.setter
+    @operation.setter
     def operation(self, ope):
         self._operation = ope
 
     def _symbol_operation(self):
-        """Mostra a operação matemática tanto no método 'checar_resultado' quanto em 'mostrar_operacao' """
-        if self.operacao == 1:
+        """Shows the math operation in both 'check_result' and 'show_question' methods"""
+        if self.operation == 1:
             return '+'
-        elif self.operacao == 2:
+        elif self.operation == 2:
             return '-'
-        elif self.operacao == 3:
+        elif self.operation == 3:
             return '*'
         else:
-            raise ValueError('erro...')
+            raise ValueError('error...')
 
     def _gerar_valor(self) -> int:
         """Gera os valores do jogo de acordo com a dificuldade escolhida pelo o usuário."""
