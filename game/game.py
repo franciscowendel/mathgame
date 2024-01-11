@@ -1,55 +1,65 @@
 from bodyofgame import BodyOfGame
+from time import sleep
 
 
-def main():
-    pontos: int = 0
-    jogar(pontos)
+def math_game():
+    points: int = 0
+    play(points)
 
 
-nomes = []
+names = []
 
 
-def jogar(pontos):
-    global nome  # noqa
+def play(points):
+    global name  # noqa
     try:
-        if len(nomes) == 0:
-            nome = input('SEU NOME: ')
-            nomes.append(nome)
-            if nome == '' or nome.isnumeric():
-                print('erro...')
-                jogar(pontos)
+        if len(names) == 0:
+            name = input('Your name: ')
+            names.append(name)
+            if name == '' or name.isnumeric():
+                print()
+                print('error...')
+                print()
+                sleep(0.5)
+                play(points)
 
-        dificuldade = input(f'{nome}, ESCOLHA A DIFICULDADE: [1 - FÁCIL, 2 - MÉDIA, 3 - DIFÍCIL, 4 - MUITO DIFÍCIL] ')
-        if dificuldade == '' or not dificuldade.isnumeric():
+        difficulty = input(f'{name}, Choose the difficulty: [1 - Easy, 2 - Medium, 3 - Hard, 4 - Expert] ')
+        if difficulty == '' or not difficulty.isnumeric():
             print()
-            print('Digite apenas números.')
+            print('Type numbers.')
             print()
-            jogar(pontos)
+            sleep(0.5)
+            play(points)
         else:
-            dificuldade = int(dificuldade)
-            if dificuldade > 4:
+            difficulty = int(difficulty)
+            if difficulty > 4:
                 print()
-                print('Apenas números entre 1 e 4.')
+                print('Only numbers between 1 and 4.')
                 print()
-                jogar(pontos)
+                sleep(0.5)
+                play(points)
 
-        ope = input(f'{nome}, ESCOLHA A OPERAÇÃO: [1 - SOMA, 2 - SUBTRAÇÃO, 3 - MULTIPLICAÇÃO] ')
+        ope = input(f'{nome}, Choose the math operation: [1 - Sum, 2 - Subtraction, 3 - Multiplication] ')
         if ope == '' or not ope.isnumeric():
-            print('Digite apenas números.')
-            main()
+            print()
+            print('Type numbers.')
+            print()
+            sleep(0.5)
+            play(points)
         else:
             ope = int(ope)
             if ope > 3:
                 print()
-                print('Apenas números entre 1 e 3.')
+                print('Only numbers between 1 and 3.')
                 print()
-                jogar(pontos)
+                sleep(0.5)
+                play(points)
                 
-        corpodojogo: BodyOfGame = BodyOfGame(dificuldade, ope)
-        corpodojogo.gerar_operacao(ope)
+        game: BodyOfGame = BodyOfGame(difficulty, ope)
+        game._create_operation(ope)
 
-    except (ValueError, TypeError, UnboundLocalError) as err:
-        return f'Erros do tipo {err} encontrados.'
+    except (ValueError, TypeError) as err:
+        return f'Errors {err} found.'
 
     print('PERGUNTA: ')
     corpodojogo.mostrar_pergunta()
