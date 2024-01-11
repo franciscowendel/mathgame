@@ -51,7 +51,7 @@ class BodyOfGame:
             raise ValueError('error...')
 
     def _create_value(self) -> int:
-        """Create the values of the game according to difficulty chosen by the user."""
+        """Creates the values of the game according to difficulty chosen by the user."""
         if self.difficulty == 1:
             return randint(0, 10)
         elif self.difficulty == 2:
@@ -63,19 +63,19 @@ class BodyOfGame:
         else:
             raise ValueError('error...')
 
-    def _gerar_resultado(self) -> int:
-        """Gera o resultado final de acordo com os valores criados e a operação escolhida."""
-        if self.operacao == 1:
-            return self.valor1 + self.valor2
-        elif self.operacao == 2:
-            if self.valor1 < self.valor2:
-                return self.valor2 - self.valor1
+    def _create_result(self) -> int:
+        """Creates the final result according to the created values and the chosen operation."""
+        if self.operation == 1:
+            return self.value_1 + self.value_2
+        elif self.operation == 2:
+            if self.value_1 < self.value_2:
+                return self.value_2 - self.value_1
             else:
-                return self.valor1 - self.valor2
-        elif self.operacao == 3:
-            return self.valor1 * self.valor2
+                return self.value_1 - self.value_2
+        elif self.operation == 3:
+            return self.value_1 * self.value_2
         else:
-            raise ValueError('erro...')
+            raise ValueError('error...')
 
     def gerar_operacao(self, ope):
         """Faz com que o usuário possa 'settar' uma operação específica."""
