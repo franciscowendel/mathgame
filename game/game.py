@@ -5,7 +5,6 @@ def main():
     pontos: int = 0
     jogar(pontos)
 
-
 nomes = []
 
 
