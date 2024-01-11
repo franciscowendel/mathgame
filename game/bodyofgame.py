@@ -77,16 +77,16 @@ class BodyOfGame:
         else:
             raise ValueError('error...')
 
-    def gerar_operacao(self, ope):
-        """Faz com que o usuário possa 'settar' uma operação específica."""
+    def _create_operation(self, ope):
+        """Assures that the right operation is set."""
         if ope == 1:
-            self.operacao = 1
+            self.operation = 1
         elif ope == 2:
-            self.operacao = 2
+            self.operation = 2
         elif ope == 3:
-            self.operacao = 3
+            self.operation = 3
         else:
-            raise ValueError('erro...')
+            raise ValueError('error...')
         return ope
 
     def checar_resultado(self, resposta) -> bool:
