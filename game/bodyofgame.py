@@ -12,34 +12,34 @@ class BodyOfGame:
         self._operation = self.ope
 
     @property
-    def dificuldade(self) -> int:
-        return self.__dificuldade
+    def difficulty(self) -> int:
+        return self.__difficulty
 
     @property
     def ope(self):
         return self.__ope
 
     @property
-    def valor1(self) -> int:
-        return self.__valor1
+    def value_1(self) -> int:
+        return self.__value_1
 
     @property
-    def valor2(self) -> int:
-        return self.__valor2
+    def value_2(self) -> int:
+        return self.__value_2
 
     @property
-    def resultado(self) -> int:
-        return self.__resultado
+    def result(self) -> int:
+        return self.__result
 
     @property
-    def operacao(self):
-        return self._operacao
+    def operation(self):
+        return self._operation
 
     @operacao.setter
-    def operacao(self, ope):
-        self._operacao = ope
+    def operation(self, ope):
+        self._operation = ope
 
-    def _simbolo_op(self):
+    def _symbol_operation(self):
         """Mostra a operação matemática tanto no método 'checar_resultado' quanto em 'mostrar_operacao' """
         if self.operacao == 1:
             return '+'
