@@ -39,7 +39,7 @@ def play(points):
                 sleep(0.5)
                 play(points)
 
-        ope = input(f'{nome}, Choose the math operation: [1 - Sum, 2 - Subtraction, 3 - Multiplication] ')
+        ope = input(f'{name}, Choose the math operation: [1 - Sum, 2 - Subtraction, 3 - Multiplication] ')
         if ope == '' or not ope.isnumeric():
             print()
             print('Type numbers.')
@@ -61,19 +61,24 @@ def play(points):
     except (ValueError, TypeError) as err:
         return f'Errors {err} found.'
 
-    print('PERGUNTA: ')
-    corpodojogo.mostrar_pergunta()
+    print()
+    print('Question: ')
+    print()
+    game._show_question()
 
     try:
-        resposta = input()
-        if not resposta.isnumeric():
-            print('Digite apenas números.')
-            jogar(pontos)
+        answer = input()
+        if not answer.isnumeric():
+            print()
+            print('Only numbers.')
+            print()
+            sleep(0.5)
+            play(points)
         else:
-            resposta = int(resposta)
+            answer = int(answer)
 
-    except (ValueError, TypeError, UnboundLocalError) as err:
-        return f'Erros do tipo {err} encontrados.'
+    except (ValueError, TypeError) as err:
+        return f'Errors {err} found.'
 
     if corpodojogo.checar_resultado(resposta):
         pontos += dificuldade
