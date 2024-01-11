@@ -40,7 +40,7 @@ class BodyOfGame:
         self._operation = ope
 
     def _symbol_operation(self):
-        """Shows the math operation in both 'check_result' and 'show_question' methods"""
+        """Shows the math operation in both 'check_result' and 'show_question' methods."""
         if self.operation == 1:
             return '+'
         elif self.operation == 2:
@@ -50,18 +50,18 @@ class BodyOfGame:
         else:
             raise ValueError('error...')
 
-    def _gerar_valor(self) -> int:
-        """Gera os valores do jogo de acordo com a dificuldade escolhida pelo o usuário."""
-        if self.dificuldade == 1:
+    def _create_value(self) -> int:
+        """Create the values of the game according to difficulty chosen by the user."""
+        if self.difficulty == 1:
             return randint(0, 10)
-        elif self.dificuldade == 2:
+        elif self.difficulty == 2:
             return randint(0, 100)
-        elif self.dificuldade == 3:
+        elif self.difficulty == 3:
             return randint(0, 1000)
-        elif self.dificuldade == 4:
+        elif self.difficulty == 4:
             return randint(0, 10000)
         else:
-            return randint(0, 100000)
+            raise ValueError('error...')
 
     def _gerar_resultado(self) -> int:
         """Gera o resultado final de acordo com os valores criados e a operação escolhida."""
