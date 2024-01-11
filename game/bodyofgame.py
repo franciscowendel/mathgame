@@ -108,9 +108,9 @@ class BodyOfGame:
             print(f'{self.value_2} {self._symbol_operation()} {self.value_2} = {self.result}')
         return verify
 
-    def mostrar_pergunta(self):
-        """Mostra os valores criados e a operação escolhida pelo usuário em forma de pergunta."""
-        if self.valor1 < self.valor2:
-            print(f'{self.valor2} {self._simbolo_op()} {self.valor1} = ?')
+    def _show_question(self):
+        """Shows the question to the user."""
+        if self.value_1 < self.value_2:
+            print(f'{self.value_2} {self._symbol_operation()} {self.value_1} = ?')
         else:
-            print(f'{self.valor1} {self._simbolo_op()} {self.valor2} = ?')
+            print(f'{self.value_1} {self._symbol_operation()} {self.value_2} = ?')
