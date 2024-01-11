@@ -5,7 +5,6 @@ def main():
     pontos: int = 0
     jogar(pontos)
 
-
 nomes = []
 
 
@@ -18,6 +17,8 @@ def jogar(pontos):
             if nome == '' or nome.isnumeric():
                 print('erro...')
                 jogar(pontos)
+
+
 
         dificuldade = input(f'{nome}, ESCOLHA A DIFICULDADE: [1 - FÁCIL, 2 - MÉDIA, 3 - DIFÍCIL, 4 - MUITO DIFÍCIL] ')
         if dificuldade == '' or not dificuldade.isnumeric():
