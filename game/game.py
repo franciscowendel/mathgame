@@ -113,19 +113,19 @@ def play(points):
     except (ValueError, TypeError) as err:
         return f'Errors {err} found.'
 
-    if continuar == 1:
-        jogar(pontos)
+    if keep_in_the_game == 1:
+        play(points)
     else:
-        if pontos == 1:
+        if points == 1:
             print()
-            print(f'{nome}, Você terminou o jogo com {pontos} ponto.')
+            print(f'{name}, you finished the game with {points} point.')
             print()
         else:
             print()
-            print(f'{nome}, Você terminou o jogo com {pontos} pontos.')
+            print(f'{name}, you finished the game with {points} point.')
             print()
         exit(1)
 
 
 if __name__ == '__main__':
-    main()
+    math_game()
