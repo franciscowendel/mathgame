@@ -1,5 +1,5 @@
 # mathgame
-A simple math game where the user can choose 
+A *simple math game* where the user can choose 
 the __difficulty__ and the __mathematical operation__: 
 addition, subtraction or, multiplication; 
 the user will earn points according to the difficulty 
