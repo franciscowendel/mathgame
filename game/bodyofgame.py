@@ -103,14 +103,22 @@ class BodyOfGame:
             print('Unfortunately, you got the answer wrong! :(')
             print()
         if self.value_1 < self.value_2:
+            print()
             print(f'{self.value_2} {self._symbol_operation()} {self.value_1} = {self.result}')
+            print()
         else:
+            print()
             print(f'{self.value_1} {self._symbol_operation()} {self.value_2} = {self.result}')
+            print()
         return verify
 
     def _show_question(self):
         """Shows the question to the user."""
         if self.value_1 < self.value_2:
+            print()
             print(f'{self.value_2} {self._symbol_operation()} {self.value_1} = ?')
+            print()
         else:
+            print()
             print(f'{self.value_1} {self._symbol_operation()} {self.value_2} = ?')
+            print()
