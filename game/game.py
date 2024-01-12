@@ -120,9 +120,13 @@ def play(points):
             print()
             print(f'{name}, you finished the game with {points} point.')
             print()
+        elif points == 0:
+            print()
+            print(f'{name}, you finished the game with {points} points.')
+            print()
         else:
             print()
-            print(f'{name}, you finished the game with {points} point.')
+            print(f'{name}, you finished the game with {points} points.')
             print()
         exit(1)
 
