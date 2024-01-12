@@ -56,7 +56,7 @@ def play(points):
                 play(points)
                 
         game: BodyOfGame = BodyOfGame(difficulty, ope)
-        game._create_operation(ope)
+        game._create_operation(ope) # noqa
 
     except (ValueError, TypeError) as err:
         return f'Errors {err} found.'
@@ -64,7 +64,7 @@ def play(points):
     print()
     print('Question: ')
     print()
-    game._show_question()
+    game._show_question() # noqa
 
     try:
         answer = input()
@@ -80,7 +80,7 @@ def play(points):
     except (ValueError, TypeError) as err:
         return f'Errors {err} found.'
 
-    if game._check_result(answer):
+    if game._check_result(answer): # noqa
         points += difficulty
         print()
         if points == 1:
