@@ -128,6 +128,8 @@ def play(points):
             print()
             print(f'{name}, you finished the game with {points} points.')
             print()
+            
+        sleep(0.5)
         exit(1)
 
 
