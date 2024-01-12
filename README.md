@@ -1,4 +1,4 @@
-# mathgame
+# Math Game
 A *simple math game* where the user can choose 
 the __difficulty__ and the __mathematical operation__: 
 addition, subtraction or, multiplication; 
