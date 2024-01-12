@@ -2,7 +2,7 @@ from bodyofgame import BodyOfGame
 from time import sleep
 
 
-def math_game():
+def mathgame():
     points: int = 0
     play(points)
 
