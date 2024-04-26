@@ -7,21 +7,22 @@ def mathgame():
     play(points)
 
 
-names = []
+users = []
 
 
 def play(points):
     global name  # noqa
     try:
-        if len(names) == 0:
+        if len(users) == 0:
             name = input('Your name: ')
-            names.append(name)
             if name == '' or name.isnumeric():
                 print()
                 print('error...')
                 print()
                 sleep(0.5)
                 play(points)
+            else:
+                users.append(name)
 
         difficulty = input(f'{name}, Choose the difficulty: [1 - Easy, 2 - Medium, 3 - Hard, 4 - Expert] ')
         if difficulty == '' or not difficulty.isnumeric():
@@ -62,7 +63,7 @@ def play(points):
         return f'Errors {err} found.'
 
     print()
-    print('Question: ')
+    print(f"{name}, here's the question: ")
     print()
     game._show_question() # noqa
 
@@ -94,16 +95,16 @@ def play(points):
         print()
 
     try:
-        keep_in_the_game = input(f'{name}, Want to keep in the game: [1 - Yes, 2 - No] ')
-        if not keep_in_the_game.isnumeric():
+        continue_in_the_game = input(f'{name}, Want to continue in the game: [1 - Yes, 2 - No] ')
+        if not continue_in_the_game.isnumeric():
             print()
             print('Type numbers.')
             print()
             sleep(0.5)
             play(points)
         else:
-            keep_in_the_game = int(keep_in_the_game)
-            if keep_in_the_game > 2:
+            continue_in_the_game = int(continue_in_the_game)
+            if continue_in_the_game > 2:
                 print()
                 print('Only numbers between 1 and 2.')
                 print()
@@ -113,7 +114,7 @@ def play(points):
     except (ValueError, TypeError) as err:
         return f'Errors {err} found.'
 
-    if keep_in_the_game == 1:
+    if continue_in_the_game == 1:
         play(points)
     else:
         if points == 1:
