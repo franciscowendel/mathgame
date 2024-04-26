@@ -9,7 +9,7 @@ class BodyOfGame:
         self.__value_1: int = self._create_value()
         self.__value_2: int = self._create_value()
         self.__result: int = self._create_result()
-        self._operation = self.ope
+        self._operation = None
 
     @property
     def difficulty(self) -> int:
@@ -95,12 +95,12 @@ class BodyOfGame:
 
         if self.result == answer:
             print()
-            print('Congratulations, you got the answer right! :)')
+            print('Congratulations, you are right! :)')
             print()
             verify: bool = True
         else:
             print()
-            print('Unfortunately, you got the answer wrong! :(')
+            print('Unfortunately, you are wrong! :(')
             print()
         if self.value_1 < self.value_2:
             print()
