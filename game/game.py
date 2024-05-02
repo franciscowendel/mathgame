@@ -117,21 +117,24 @@ def play(points):
     if continue_in_the_game == 1:
         play(points)
     else:
-        if points == 1:
-            print()
-            print(f'{name}, you finished the game with {points} point.')
-            print()
-        elif points == 0:
+        if points == 0:
             print()
             print(f'{name}, you finished the game with {points} points.')
             print()
+            exit(1)
+
+        elif points == 1:
+            print()
+            print(f'{name}, you finished the game with {points} point.')
+            print()
+            exit(2)
+
         else:
             print()
             print(f'{name}, you finished the game with {points} points.')
             print()
-            
-        sleep(0.5)
-        exit(1)
+            exit(3)
+
 
 
 if __name__ == '__main__':
